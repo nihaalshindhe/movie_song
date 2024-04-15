@@ -1,0 +1,238 @@
+/* Apply styles to the body element */
+
+body {
+  font-family: "Montserrat";
+  background-image: url('https://wallpapers.com/images/hd/dark-gradient-background-aqvmeg1nnxvrrgmd.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Use min-height instead of height */
+  box-sizing: border-box;
+ 
+}
+
+/* Reset margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Montserrat";
+}
+p{
+  font-size: 25px;
+  font-weight: lighter;
+  font-family: "Montserrat";
+}
+/* Style the box1 paragraph */
+.movies{
+  display:flex;
+  justify-content: space-around;
+  width: 1200px;
+  padding-bottom: 50px;
+}
+.box1{
+  width: 95%;
+}
+.info{
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.info img{
+  width: 30%;
+}
+.child1{
+  text-align: center;
+  padding: 30px;
+}
+.child2{
+  padding: 20px;
+  text-align: justify;
+}
+p.box1 {
+  
+  text-align: center;
+  margin: 20px 0;
+  width: 1200px;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  
+  transition: all 300ms;
+}
+
+
+/* Style the child1 span within the box1 paragraph */
+p.box1 .child1 {
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Style the box2 paragraph */
+p.box2 {
+  
+  text-align: center;
+  margin: 20px 0;
+  width: 1200px;
+  height: 100px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  
+  
+  transition: all 300ms;
+}
+
+
+/* Style the form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the box3 div containing the file input */
+div.box3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 700px;
+  padding: 30px;
+}
+
+/* Style the child3 label for the file input */
+label.child3 {
+ 
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+label.child3:active{
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+.button_1{
+  
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+/* Style the hidden file input */
+input.hidden {
+  display: none;
+}
+.box4 p {
+  font-size: 20px;;
+}
+/* Style the box4 span for file upload status */
+span.box4 {
+  text-align: center;
+  margin: 70px 0;
+  font-size: 5px;
+  text-align: center;
+  margin: 20px 0px;
+  width: 1200px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  
+  transition: all 300ms;
+}
+
+
+
+/* Style the button_2 button for form submission */
+div.child4 button.button_2 {
+  
+
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+div.child4 button.button_2:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+
+/* Style the box5 div */
+div.box5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Style the chil5 span within the box5 div */
+div.box5 .chil5 {
+  
+
+  font-size: 20px;
+  margin: 70px 0;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0;
+  width: 1200px;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  
+  
+  transition: all 300ms;
+}
+.chil5 p{
+  font-size: 20px;
+}
+::-webkit-scrollbar {
+  width: 0px; /* Width of the scrollbar */
+}
+::-webkit-scrollbar-track {
+  background: rgba(62, 3, 110, 1) /* Color of the scrollbar track */
+}

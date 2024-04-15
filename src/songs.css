@@ -1,0 +1,19 @@
+.songs{
+    height: 50vh; /* 50% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px; /* Adjust the margin as needed */
+    font-size: 20px;
+    color: white;
+}
+li{
+    font-weight: lighter;
+    padding: 10px;
+}
+
+li a{
+    text-decoration: none;
+}

@@ -1,0 +1,33 @@
+.movie-container {
+    height: 80vh; /* 50% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    width: 50%;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px; /* Adjust the margin as needed */
+}
+h2{
+    padding: 10px;
+}
+p{
+    padding: 10px;
+}
+img{
+    padding: 10px;
+}
+.movie-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.movie-item img {
+    max-width: 200px; /* Limit the image size */
+}
+.movie-container{
+    transition: ease-in;
+}
