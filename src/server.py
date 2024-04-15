@@ -10,8 +10,8 @@ import tensorflow as tf
 import base64
 from PIL import Image
 import numpy as np
-API_KEY = "94c1d3a66c26d56fc992fea540c08f84"
-API_SECRET = "bb591d27093cbdcd08a025da31b19510"
+API_KEY = ""
+API_SECRET = ""
 USER_AGENT = 'Dataquest'
 emotion2 = ''
 
@@ -118,7 +118,7 @@ def upload():
     
 @app.route("/movies")
 def main():
-    api_key = 'a366f5dcb2917ca83b9585ce27ad78f1'
+    api_key = ''
     if emotion2 == "sad" or emotion2=="angry":
         genre_id = 35  # Comedy genre ID
     elif emotion2 == "fear":
