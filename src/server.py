@@ -3,15 +3,13 @@ from flask_cors import CORS
 import os
 import flask
 from deepface import DeepFace
+from dotenv import load_dotenv
+import os
+
 # Importing deps for image prediction
-from imdb import IMDb
-import random
-import tensorflow as tf
-import base64
-from PIL import Image
-import numpy as np
-API_KEY = ""
-API_SECRET = ""
+
+API_KEY = os.getenv("API_KEY")
+API_SECRET = os.getenv("SECRET_KEY")
 USER_AGENT = 'Dataquest'
 emotion2 = ''
 
@@ -21,10 +19,9 @@ def lastfm_get(url,payload):
     return response
 
 # Using Text Blob
-from bs4 import BeautifulSoup as SOUP
-import requests as HTTP
+
 import random
-import json
+
 
 def getImage(image):
     try:
@@ -102,8 +99,8 @@ def songs():
 def upload():
     global emotion2
     file = request.files['file']
-    file.save('D:\\Nihaal\\mlc2\\src\\uploads\\' + file.filename)
-    img_path = f'D:\\Nihaal\\mlc2\\src\\uploads\\'+file.filename
+    file.save(f"D:\\movie\\movie_song\\src\\uploads" + file.filename)
+    img_path = f"D:\\movie\\movie_song\\src\\uploads"+file.filename
     pred = DeepFace.analyze(img_path,actions = ['emotion'],enforce_detection=False)
     print(pred)
 
@@ -112,13 +109,13 @@ def upload():
     emotion2 = emotion
     print(emotion)
     print(type(emotion))
-    if os.path.exists(f"D:\\Nihaal\\mlc2\\src\\uploads\\{file.filename}"):
-        os.remove(f"D:\\Nihaal\\mlc2\\src\\uploads\\{file.filename}")
+    if os.path.exists(f"D:\\movie\\movie_song\\src\\uploads{file.filename}"):
+        os.remove(f"D:\\movie\\movie_song\\src\\uploads{file.filename}")
     return jsonify({'message':emotion})
     
 @app.route("/movies")
 def main():
-    api_key = ''
+    api_key = 'a366f5dcb2917ca83b9585ce27ad78f1'
     if emotion2 == "sad" or emotion2=="angry":
         genre_id = 35  # Comedy genre ID
     elif emotion2 == "fear":

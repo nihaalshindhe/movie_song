@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import './style.css';
 import './Movie.js';
-import img from 'f:/cs-removebg-preview.png';
+
 import MovieList from "./Movie.js";
 import MovieButton from "./MovieButton.js";
 import SongButton from "./SongButton.js";
@@ -88,11 +88,11 @@ function App() {
       <body>
         <div className="box1">
           <p className="child1">
-            EmoReco
+            Emotion Detection
           </p>
           <div className="info">
-          <p className="child2">This project is a small demo illustrating how data, in this case an image is sent to the backend for processing by a custom machine learning algorithm.<br />The algorithm assists in classifying or making predictions based on the provided data.</p>
-          <img src={img}></img>
+          <p className="child2">A Simple project leveraging the flexibility of react and the simplicity of Flask. This is a project I developed to better understand react and how to route requests. The movies are pulled from Tmdb using their Api and the same for songs using lastfm's Api</p>
+
           </div>
         </div>
         <p className="box2">
