@@ -6,7 +6,7 @@ from deepface import DeepFace
 from dotenv import load_dotenv
 import os
 
-# Importing deps for image prediction
+
 
 API_KEY = os.getenv("API_KEY")
 API_SECRET = os.getenv("SECRET_KEY")
@@ -18,7 +18,7 @@ def lastfm_get(url,payload):
     response = requests.get(url,headers=headers,params=payload)
     return response
 
-# Using Text Blob
+
 
 import random
 
@@ -115,25 +115,21 @@ def upload():
     
 @app.route("/movies")
 def main():
-    api_key = 'a366f5dcb2917ca83b9585ce27ad78f1'
+    api_key = os.getenv("API_KEY1")
     if emotion2 == "sad" or emotion2=="angry":
-        genre_id = 35  # Comedy genre ID
+        genre_id = 35
     elif emotion2 == "fear":
-        genre_id = 53 #Thriller genre ID
+        genre_id = 53
     elif emotion2 == "happy":
-        genre_id = 878 #Fiction genre ID
+        genre_id = 878
     else:
-        genre_id = 28  # Action genre ID
+        genre_id = 28
 
-    # Fetch movie list by genre from TMDb API
+
     url = f'https://api.themoviedb.org/3/discover/movie?api_key={api_key}&with_genres={genre_id}&sort_by=popularity.desc'
     response = requests.get(url)
     data = response.json()
-
-    # Extract relevant information from the API response
     movies = data.get('results', [])
-
-    # Randomly select 5 movies from the list
     selected_movies = random.sample(movies, min(5, len(movies)))
 
     result = []

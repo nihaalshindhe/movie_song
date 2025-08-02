@@ -6,16 +6,14 @@ import './Movie.js';
 import MovieList from "./Movie.js";
 import MovieButton from "./MovieButton.js";
 import SongButton from "./SongButton.js";
-import SongList from "./SongList.js";
+
 
 function App() {
   const [data, setData] = useState("");
   const [val, setVal] = useState("upload image to predict");
   const [filename, setFilename] = useState("No file Uploaded");
   const [displayMovies, setDisplayMovies] = useState(false);
-  const [displaySongs, setDisplaySongs] = useState(false);
   const [file, setFile] = useState(null);
-
   const videoRef = useRef();
   const canvasRef = useRef();
 
