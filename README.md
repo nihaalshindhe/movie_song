@@ -1,1 +1,3 @@
-A simple React apllication I built to understaand how components,states can be used to make a functional webisite .This also served as intro to building and using API's
+A simple React application built to understand the fundamentals of components and state management.
+This project also served as an introduction to integrating and consuming APIs to create a functional and interactive website.
+
